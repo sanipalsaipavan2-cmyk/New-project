@@ -1,0 +1,11 @@
+p{
+    color: red;
+}
+
+input.ng-touched.ng-invalid{
+    background-color: rgb(165, 91, 91);
+}
+
+.green{
+    color: green;
+}

@@ -1,0 +1,18 @@
+
+
+<form #ref="ngForm" (ngSubmit)="submit(ref)">
+<label >Email:</label>
+<input type="email" name="uemail" #em="ngModel" [(ngModel)]="useremail" email required><br>
+
+<p *ngIf="em.touched&&em.errors?.['required']">email is required</p>
+<p *ngIf="em.touched&&em.errors?.['email']">email is required</p>
+
+<label >password:</label>
+<input type="password" name="upassword" #ep="ngModel" [(ngModel)]="userpassword" minlength="8" required ><br>
+<p *ngIf="ep.touched&&ep.errors?.['required']">password is required</p>
+<p *ngIf="ep.touched&&ep.errors?.['minlength']">minimun 8 characters are required is required</p>
+<p class="green"      *ngIf="ep.touched&&ep.valid">entered correct data</p>
+
+<button [disabled]="ref.invalid">submit</button>
+
+</form>

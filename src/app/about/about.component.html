@@ -1,0 +1,31 @@
+<table class="vehicle-table">
+  <thead >
+    <tr>
+      <th>Vehicle</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Type</th>
+      <th>Fuel</th>
+      <th>Color</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let vehicle of cols">
+    <tr>
+      <td>{{ vehicle.Vehicle }}</td>
+      <td>{{ vehicle.manufacturer }}</td>
+      <td>{{ vehicle.model || '-' }}</td>
+      <td>{{ vehicle.type }}</td>
+      <td>{{ vehicle.fuel }}</td>
+      <td>{{ vehicle.color }}</td>
+      <td>
+        <img *ngIf="vehicle.image; else noImg" 
+             [src]="vehicle.image" 
+             alt="{{ vehicle.Vehicle }}" 
+             width="80">
+        <ng-template #noImg>No Image</ng-template>
+      </td>
+      <td> <button (click)="delete(vehicle.id)">delete</button></td>
+    </tr>
+  </tbody>
+</table>

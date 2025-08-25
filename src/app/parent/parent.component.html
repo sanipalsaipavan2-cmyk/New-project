@@ -1,0 +1,8 @@
+<p>parent works!</p>
+
+
+<app-child [parentData1]="parentData" (ent)="recieveData($event)"></app-child>
+
+<input type="text" [(ngModel)]="parentData">
+
+{{childData1}}

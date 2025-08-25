@@ -1,0 +1,22 @@
+
+<form [formGroup]="login" (ngSubmit)="submit()">
+  <label>Email:</label>
+   <input type="email" formControlName="Vehicle"><br>
+   <p *ngIf="login.get('uemail')?.touched&& login.get('uemail')?.errors?.['required']">email is required</p>
+   <p *ngIf="login.get('uemail')?.touched&& login.get('uemail')?.errors?.['email']">Enter valid email</p>
+
+   <label>password:</label>
+   <input type="password" formControlName="manufacturer"><br>
+
+   <p *ngIf="login.get('upassword')?.touched&& login.get('upassword')?.errors?.['required']">email is required</p>
+   <p *ngIf="login.get('upassword')?.touched&& login.get('upassword')?.errors?.['minlength']">minimum 8 characters are required</p>
+
+
+   <button [disabled]="login.invalid">submit</button>
+
+  
+
+
+
+
+</form>
