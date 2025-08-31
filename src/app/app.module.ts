@@ -16,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { TemplateformsComponent } from './templateforms/templateforms.component'; 
 import { HttpClientModule } from '@angular/common/http';
-import { ProductdetailsComponent } from './productdetails/productdetails.component';   
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { LoginComponent } from './login/login.component';   
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     ChildComponent,
     ReactiveformsComponent,
     TemplateformsComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
